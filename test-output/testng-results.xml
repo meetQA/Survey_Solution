@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="0" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-03-02T09:31:03Z" name="Default suite" finished-at="2022-03-02T09:31:25Z" duration-ms="22083">
+    <groups>
+    </groups>
+    <test started-at="2022-03-02T09:31:03Z" name="Default test" finished-at="2022-03-02T09:31:25Z" duration-ms="22083">
+      <class name="SurveySolution.SurveySolution_Testcase">
+        <test-method is-config="true" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:SurveySolution.SurveySolution_Testcase@39d9314d]" started-at="2022-03-02T15:01:03Z" name="beforeClass" finished-at="2022-03-02T15:01:15Z" duration-ms="11397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@198ef2ce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method signature="SSQPad_14()[pri:0, instance:SurveySolution.SurveySolution_Testcase@39d9314d]" started-at="2022-03-02T15:01:15Z" name="SSQPad_14" description="To verify that user can not  login without entering credentials." finished-at="2022-03-02T15:01:25Z" duration-ms="10678" status="FAIL">
+          <exception class="org.openqa.selenium.UnsupportedCommandException">
+            <message>
+              <![CDATA[Unknown mobile command "backdoor". Only shell,execEmuConsoleCommand,dragGesture,flingGesture,doubleClickGesture,longClickGesture,pinchCloseGesture,pinchOpenGesture,swipeGesture,scrollGesture,scrollBackTo,scroll,viewportScreenshot,viewportRect,deepLink,startLogsBroadcast,stopLogsBroadcast,acceptAlert,dismissAlert,batteryInfo,deviceInfo,getDeviceTime,changePermissions,getPermissions,performEditorAction,startScreenStreaming,stopScreenStreaming,getNotifications,listSms,type,sensorSet,deleteFile,startService,stopService,getContexts,installMultipleApks commands are supported.
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'QUASPC1210', ip: '192.168.1.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 3 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 753ae642-8541-45fb-99ca-bc6fff9d8c12]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.UnsupportedCommandException: Unknown mobile command "backdoor". Only shell,execEmuConsoleCommand,dragGesture,flingGesture,doubleClickGesture,longClickGesture,pinchCloseGesture,pinchOpenGesture,swipeGesture,scrollGesture,scrollBackTo,scroll,viewportScreenshot,viewportRect,deepLink,startLogsBroadcast,stopLogsBroadcast,acceptAlert,dismissAlert,batteryInfo,deviceInfo,getDeviceTime,changePermissions,getPermissions,performEditorAction,startScreenStreaming,stopScreenStreaming,getNotifications,listSms,type,sensorSet,deleteFile,startService,stopService,getContexts,installMultipleApks commands are supported.
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'QUASPC1210', ip: '192.168.1.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 3 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 753ae642-8541-45fb-99ca-bc6fff9d8c12
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:480)
+	at SurveySolution.SurveySolution_Testcase.SSQPad_14(SurveySolution_Testcase.java:234)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.UnsupportedCommandException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SSQPad_14 -->
+      </class> <!-- SurveySolution.SurveySolution_Testcase -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
