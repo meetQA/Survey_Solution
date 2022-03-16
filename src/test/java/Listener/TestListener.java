@@ -10,7 +10,7 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.*;
 
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 
 
@@ -45,8 +45,8 @@ public class TestListener implements ITestListener {
 
 				ITestContext context = result.getTestContext();
 				//WebDriver driver = (WebDriver) context.getAttribute("driver");
-				AppiumDriver driver = null;
-		         driver = (AppiumDriver) context.getAttribute("AppiumDriver");
+				AndroidDriver driver = null;
+		         driver = (AndroidDriver) context.getAttribute("AndroidDriver");
 				String targetLocation = null;
 
 				String testClassName = getTestClassName(result.getInstanceName()).trim();
@@ -106,8 +106,8 @@ public class TestListener implements ITestListener {
 
 		ITestContext context = result.getTestContext();
 		//WebDriver driver = (WebDriver) context.getAttribute("driver");
-		AppiumDriver driver = null;
-         driver = (AppiumDriver) context.getAttribute("AppiumDriver");
+		AndroidDriver driver = null;
+         driver = (AndroidDriver) context.getAttribute("AndroidDriver");
 		String targetLocation = null;
 
 		String testClassName = getTestClassName(result.getInstanceName()).trim();

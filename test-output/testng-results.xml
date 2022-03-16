@@ -2,39 +2,43 @@
 <testng-results total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-02T09:31:03Z" name="Default suite" finished-at="2022-03-02T09:31:25Z" duration-ms="22083">
+  <suite started-at="2022-03-16T04:38:31Z" name="Default suite" finished-at="2022-03-16T04:41:47Z" duration-ms="195393">
     <groups>
     </groups>
-    <test started-at="2022-03-02T09:31:03Z" name="Default test" finished-at="2022-03-02T09:31:25Z" duration-ms="22083">
+    <test started-at="2022-03-16T04:38:31Z" name="Default test" finished-at="2022-03-16T04:41:47Z" duration-ms="195393">
       <class name="SurveySolution.SurveySolution_Testcase">
-        <test-method is-config="true" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:SurveySolution.SurveySolution_Testcase@39d9314d]" started-at="2022-03-02T15:01:03Z" name="beforeClass" finished-at="2022-03-02T15:01:15Z" duration-ms="11397" status="PASS">
+        <test-method is-config="true" signature="beforeClass(org.testng.ITestContext)[pri:0, instance:SurveySolution.SurveySolution_Testcase@5b6ec132]" started-at="2022-03-16T10:08:31Z" name="beforeClass" finished-at="2022-03-16T10:08:45Z" duration-ms="13592" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@198ef2ce]]>
+                <![CDATA[org.testng.TestRunner@74fab04a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="SSQPad_14()[pri:0, instance:SurveySolution.SurveySolution_Testcase@39d9314d]" started-at="2022-03-02T15:01:15Z" name="SSQPad_14" description="To verify that user can not  login without entering credentials." finished-at="2022-03-02T15:01:25Z" duration-ms="10678" status="FAIL">
-          <exception class="org.openqa.selenium.UnsupportedCommandException">
+        <test-method signature="SSQPad_240()[pri:0, instance:SurveySolution.SurveySolution_Testcase@5b6ec132]" started-at="2022-03-16T10:08:45Z" name="SSQPad_240" description="To verify that user gets &quot;Help&quot; section open from  attributes page." finished-at="2022-03-16T10:11:46Z" duration-ms="181785" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unknown mobile command "backdoor". Only shell,execEmuConsoleCommand,dragGesture,flingGesture,doubleClickGesture,longClickGesture,pinchCloseGesture,pinchOpenGesture,swipeGesture,scrollGesture,scrollBackTo,scroll,viewportScreenshot,viewportRect,deepLink,startLogsBroadcast,stopLogsBroadcast,acceptAlert,dismissAlert,batteryInfo,deviceInfo,getDeviceTime,changePermissions,getPermissions,performEditorAction,startScreenStreaming,stopScreenStreaming,getNotifications,listSms,type,sensorSet,deleteFile,startService,stopService,getContexts,installMultipleApks commands are supported.
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'QUASPC1210', ip: '192.168.1.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 3 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: 753ae642-8541-45fb-99ca-bc6fff9d8c12]]>
+Session ID: 94ba0ef0-617a-4341-8674-2e97f30121ad
+*** Element info: {Using=xpath, value=//android.widget.ImageButton[@content-desc="Navigate up"]}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.UnsupportedCommandException: Unknown mobile command "backdoor". Only shell,execEmuConsoleCommand,dragGesture,flingGesture,doubleClickGesture,longClickGesture,pinchCloseGesture,pinchOpenGesture,swipeGesture,scrollGesture,scrollBackTo,scroll,viewportScreenshot,viewportRect,deepLink,startLogsBroadcast,stopLogsBroadcast,acceptAlert,dismissAlert,batteryInfo,deviceInfo,getDeviceTime,changePermissions,getPermissions,performEditorAction,startScreenStreaming,stopScreenStreaming,getNotifications,listSms,type,sensorSet,deleteFile,startService,stopService,getContexts,installMultipleApks commands are supported.
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
 System info: host: 'QUASPC1210', ip: '192.168.1.210', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
 Driver info: io.appium.java_client.android.AndroidDriver
 Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 3 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: 753ae642-8541-45fb-99ca-bc6fff9d8c12
+Session ID: 94ba0ef0-617a-4341-8674-2e97f30121ad
+*** Element info: {Using=xpath, value=//android.widget.ImageButton[@content-desc="Navigate up"]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -48,8 +52,20 @@ Session ID: 753ae642-8541-45fb-99ca-bc6fff9d8c12
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:480)
-	at SurveySolution.SurveySolution_Testcase.SSQPad_14(SurveySolution_Testcase.java:234)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:419)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:152)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at SurveySolution.SurveySolution_Testcase.SSQPad_240(SurveySolution_Testcase.java:11634)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -76,10 +92,10 @@ Session ID: 753ae642-8541-45fb-99ca-bc6fff9d8c12
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.UnsupportedCommandException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SSQPad_14 -->
+        </test-method> <!-- SSQPad_240 -->
       </class> <!-- SurveySolution.SurveySolution_Testcase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

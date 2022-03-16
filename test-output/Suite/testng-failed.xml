@@ -8,10 +8,44 @@
     <classes>
       <class name="SurveySolution.SurveySolution_Testcase">
         <methods>
-          <include name="SSQPad_10"/>
+          <include name="SSQPad_29"/>
+          <include name="SSQPad_32"/>
+          <include name="SSQPad_28"/>
+          <include name="SSQPad_27"/>
+          <include name="SSQPad_49"/>
+          <include name="SSQPad_26"/>
+          <include name="SSQPad_48"/>
+          <include name="SSQPad_25"/>
+          <include name="SSQPad_47"/>
           <include name="SSQPad_09"/>
-          <include name="SSQPad_08"/>
           <include name="beforeClass"/>
+          <include name="SSQPad_31"/>
+          <include name="SSQPad_30"/>
+          <include name="SSQPad_51"/>
+          <include name="SSQPad_50"/>
+          <include name="SSQPad_35"/>
+          <include name="SSQPad_34"/>
+          <include name="SSQPad_33"/>
+          <include name="SSQPad_18"/>
+          <include name="SSQPad_21"/>
+          <include name="SSQPad_43"/>
+          <include name="SSQPad_17"/>
+          <include name="SSQPad_39"/>
+          <include name="SSQPad_16"/>
+          <include name="SSQPad_38"/>
+          <include name="SSQPad_37"/>
+          <include name="SSQPad_36"/>
+          <include name="SSQPad_19"/>
+          <include name="SSQPad_20"/>
+          <include name="SSQPad_42"/>
+          <include name="SSQPad_41"/>
+          <include name="SSQPad_40"/>
+          <include name="SSQPad_24"/>
+          <include name="SSQPad_46"/>
+          <include name="SSQPad_23"/>
+          <include name="SSQPad_45"/>
+          <include name="SSQPad_22"/>
+          <include name="SSQPad_44"/>
         </methods>
       </class> <!-- SurveySolution.SurveySolution_Testcase -->
     </classes>

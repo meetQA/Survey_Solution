@@ -12,10 +12,10 @@ import org.openqa.selenium.io.FileHandler;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 
-import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 
 public class Extra_Screen {
-	public void Screenshot(AppiumDriver driver,String Classname,String methodname) {
+	public void Screenshot(AndroidDriver driver,String Classname,String methodname) {
 		//log.info("*** Test execution " + result.getMethod().getMethodName() + " failed...");
 				//log.info((result.getMethod().getMethodName() + " failed!"));
 

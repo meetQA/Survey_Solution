@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>11/1/36</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Feb 28 09:09:19 IST 2022</td>
+<td>Started on:</td><td>Tue Mar 08 18:08:22 IST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>198 seconds (198611 ms)</td>
+<tr><td>Total time:</td><td>280 seconds (280046 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,43 +68,83 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='SurveySolution.SurveySolution_Testcase.SSQPad_08()'><b>SSQPad_08</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is notified with Warning Dialog on denial of permissions for second time.</td>
-<td><div><pre>java.lang.Error: Unresolved compilation problems: 
-	Syntax error, insert &quot;AssignmentOperator Expression&quot; to complete Assignment
-	Syntax error, insert &quot;;&quot; to complete BlockStatements
-	The left-hand side of an assignment must be a variable
-	Invalid character constant
-	Invalid character constant
-	Syntax error, insert &quot;]&quot; to complete ArrayAccess
-	Syntax error, insert &quot;AssignmentOperator Expression&quot; to complete Assignment
-	Syntax error, insert &quot;;&quot; to complete Statement
-
-	at SurveySolution.SurveySolution_Testcase.SSQPad_08(SurveySolution_Testcase.java:141)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1778028150", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1778028150'><pre>java.lang.Error: Unresolved compilation problems: 
-	Syntax error, insert &quot;AssignmentOperator Expression&quot; to complete Assignment
-	Syntax error, insert &quot;;&quot; to complete BlockStatements
-	The left-hand side of an assignment must be a variable
-	Invalid character constant
-	Invalid character constant
-	Syntax error, insert &quot;]&quot; to complete ArrayAccess
-	Syntax error, insert &quot;AssignmentOperator Expression&quot; to complete Assignment
-	Syntax error, insert &quot;;&quot; to complete Statement
-
-	at SurveySolution.SurveySolution_Testcase.SSQPad_08(SurveySolution_Testcase.java:141)
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Parameters: org.testng.TestRunner@1dca62c2</td>
+<td><div><pre>org.openqa.selenium.WebDriverException: It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;QUASPC1210&apos;, ip: &apos;192.168.1.210&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:195)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:209)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:93)
+	at SurveySolution.SurveySolution_Testcase.beforeClass(SurveySolution_Testcase.java:47)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:185)
+	... 39 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;QUASPC1210&apos;, ip: &apos;192.168.1.210&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\meet.g\AppData\Local\Programs\Appium Server GUI\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\jsonwp-proxy\proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	... 44 more
+... Removed 35 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace42968385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace42968385'><pre>org.openqa.selenium.WebDriverException: It is impossible to create a new session because &apos;createSession&apos; which takes HttpClient, InputStream and long was not found or it is not accessible
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;QUASPC1210&apos;, ip: &apos;192.168.1.210&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
+Driver info: driver.version: AndroidDriver
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:195)
+	at io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:209)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:130)
+	at io.appium.java_client.DefaultGenericMobileDriver.&lt;init&gt;(DefaultGenericMobileDriver.java:38)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:84)
+	at io.appium.java_client.AppiumDriver.&lt;init&gt;(AppiumDriver.java:94)
+	at io.appium.java_client.android.AndroidDriver.&lt;init&gt;(AndroidDriver.java:93)
+	at SurveySolution.SurveySolution_Testcase.beforeClass(SurveySolution_Testcase.java:47)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
 	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
 	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
@@ -123,46 +163,274 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:185)
+	... 39 more
+Caused by: org.openqa.selenium.WebDriverException: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;QUASPC1210&apos;, ip: &apos;192.168.1.210&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
+Driver info: driver.version: AndroidDriver
+remote stacktrace: UnknownError: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to the remote server. Original error: socket hang up
+    at UIA2Proxy.command (C:\Users\meet.g\AppData\Local\Programs\Appium Server GUI\resources\app\node_modules\appium\node_modules\appium-base-driver\lib\jsonwp-proxy\proxy.js:274:13)
+    at runMicrotasks (&lt;anonymous&gt;)
+    at processTicksAndRejections (internal/process/task_queues.js:85:5)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$new$0(W3CHandshakeResponse.java:57)
+	at org.openqa.selenium.remote.W3CHandshakeResponse.lambda$getResponseFunction$2(W3CHandshakeResponse.java:104)
+	at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
+	at java.base/java.util.Spliterators$ArraySpliterator.tryAdvance(Spliterators.java:958)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:127)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:502)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:488)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:543)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	... 44 more
 </pre></div></td>
 <td>0</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.beforeClass()'><b>beforeClass</b><br>Test class: SurveySolution.SurveySolution_Testcase</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_09()'><b>SSQPad_09</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that Application Closes by tapping on "OK" button of "Permission Required" Dialog.</td>
 <td><div><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
 System info: host: &apos;QUASPC1210&apos;, ip: &apos;192.168.1.210&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 4 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5556}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5556, deviceScreenDensity: 560, deviceScreenSize: 1440x3040, deviceUDID: emulator-5556, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5556, viewportRect: {height: 2529, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: 126555eb-5b3d-42d7-8849-6e8d234b9227
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 3 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 4714ec8a-4823-45dd-ba48-b54355466b7d
 *** Element info: {Using=id, value=com.android.packageinstaller:id/permission_deny_button}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
 	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
 	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at SurveySolution.SurveySolution_Testcase.SSQPad_09(SurveySolution_Testcase.java:176)
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace17808347", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace17808347'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at SurveySolution.SurveySolution_Testcase.SSQPad_09(SurveySolution_Testcase.java:178)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1348045338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1348045338'><pre>org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
 System info: host: &apos;QUASPC1210&apos;, ip: &apos;192.168.1.210&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.12&apos;
-Driver info: io.appium.java_client.AppiumDriver
-Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 4 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5556}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5556, deviceScreenDensity: 560, deviceScreenSize: 1440x3040, deviceUDID: emulator-5556, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5556, viewportRect: {height: 2529, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
-Session ID: 126555eb-5b3d-42d7-8849-6e8d234b9227
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities {app: C:\Users\meet.g\eclipse-wor..., appPackage: com.IGiS.QPadSS, automationName: appium, databaseEnabled: false, desired: {app: C:\Users\meet.g\eclipse-wor..., automationName: appium, deviceName: Pixel 3 XL API 28, newCommandTimeout: 10000, platformName: android, platformVersion: 9, udid: emulator-5554}, deviceApiLevel: 28, deviceManufacturer: Google, deviceModel: AOSP on IA Emulator, deviceName: emulator-5554, deviceScreenDensity: 560, deviceScreenSize: 1440x2960, deviceUDID: emulator-5554, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: true, newCommandTimeout: 10000, pixelRatio: 3.5, platform: LINUX, platformName: Android, platformVersion: 9, statBarHeight: 172, takesScreenshot: true, udid: emulator-5554, viewportRect: {height: 2449, left: 0, top: 172, width: 1440}, warnings: {}, webStorageEnabled: false}
+Session ID: 4714ec8a-4823-45dd-ba48-b54355466b7d
 *** Element info: {Using=id, value=com.android.packageinstaller:id/permission_deny_button}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
@@ -172,21 +440,25 @@ Session ID: 126555eb-5b3d-42d7-8849-6e8d234b9227
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:250)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:41)
+	at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:61)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:317)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:62)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:69)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementById(DefaultGenericMobileDriver.java:70)
 	at io.appium.java_client.AppiumDriver.findElementById(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementById(AndroidDriver.java:1)
 	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:57)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:309)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:58)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at SurveySolution.SurveySolution_Testcase.SSQPad_09(SurveySolution_Testcase.java:176)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at SurveySolution.SurveySolution_Testcase.SSQPad_09(SurveySolution_Testcase.java:178)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -212,50 +484,8 @@ Session ID: 126555eb-5b3d-42d7-8849-6e8d234b9227
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>10</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
-<tr>
-<td title='SurveySolution.SurveySolution_Testcase.SSQPad_10()'><b>SSQPad_10</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user gets "App info." page open by tapping on "Open Setting" button.</td>
-<td><div><pre>java.lang.AssertionError: expected: java.lang.String&lt;RUNNING_IN_BACKGROUND&gt; but was: io.appium.java_client.appmanagement.ApplicationState&lt;RUNNING_IN_BACKGROUND&gt;
-	at org.junit.Assert.fail(Assert.java:93)
-	at org.junit.Assert.failNotEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:128)
-	at org.junit.Assert.assertEquals(Assert.java:147)
-	at SurveySolution.SurveySolution_Testcase.SSQPad_10(SurveySolution_Testcase.java:215)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1331654213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1331654213'><pre>java.lang.AssertionError: expected: java.lang.String&lt;RUNNING_IN_BACKGROUND&gt; but was: io.appium.java_client.appmanagement.ApplicationState&lt;RUNNING_IN_BACKGROUND&gt;
-	at org.junit.Assert.fail(Assert.java:93)
-	at org.junit.Assert.failNotEquals(Assert.java:647)
-	at org.junit.Assert.assertEquals(Assert.java:128)
-	at org.junit.Assert.assertEquals(Assert.java:147)
-	at SurveySolution.SurveySolution_Testcase.SSQPad_10(SurveySolution_Testcase.java:215)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>21</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>9</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -268,37 +498,245 @@ Session ID: 126555eb-5b3d-42d7-8849-6e8d234b9227
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_01()'><b>SSQPad_01</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that application Installed successfully.</td>
 <td></td>
 <td>0</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_02()'><b>SSQPad_02</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that application Uninstalled successfully.</td>
 <td></td>
 <td>1</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_03()'><b>SSQPad_03</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify the Icon of application.</td>
 <td></td>
 <td>0</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_04()'><b>SSQPad_04</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify the Splash screen.</td>
 <td></td>
 <td>0</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_05()'><b>SSQPad_05</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that Location access permission dialogs pops up.</td>
 <td></td>
-<td>6</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>5</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_06()'><b>SSQPad_06</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is notified with Dialog box on denying permissions for first time.</td>
 <td></td>
-<td>12</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>11</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 <tr>
 <td title='SurveySolution.SurveySolution_Testcase.SSQPad_07()'><b>SSQPad_07</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to get Permission dialog open second time by tapping on "Ok" button from "Permission" dialog box.</td>
 <td></td>
 <td>13</td>
-<td>SurveySolution.SurveySolution_Testcase@67b9b51a</td></tr>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_08()'><b>SSQPad_08</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is notified with Warning Dialog on denial of permissions for second time.</td>
+<td></td>
+<td>20</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_13()'><b>SSQPad_13</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is allowed to access Sign in page.</td>
+<td></td>
+<td>13</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_14()'><b>SSQPad_14</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user can not  login without entering credentials.</td>
+<td></td>
+<td>12</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_15()'><b>SSQPad_15</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify password visibility toggle functionality.<br>Parameters: public void SurveySolution.SurveySolution_Testcase.SSQPad_15(java.lang.reflect.Method) throws java.lang.Exception</td>
+<td></td>
+<td>18</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_16()'><b>SSQPad_16</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user get warning dialog for sign in without internet.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_17()'><b>SSQPad_17</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user can not login with wrong Credentials.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_18()'><b>SSQPad_18</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user can not login if can not connect to server or server is off.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_19()'><b>SSQPad_19</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user can login successfully.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_20()'><b>SSQPad_20</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify "Home" page of SSQpad mobile application.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_21()'><b>SSQPad_21</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify the view of "Top panel" of SSQ pad application.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_22()'><b>SSQPad_22</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to expand Hamburger menu.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_23()'><b>SSQPad_23</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify user is able to close "Hamburger menu".</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_24()'><b>SSQPad_24</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to get back to the current location by "Locate" functionality.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_25()'><b>SSQPad_25</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to sync all pending data.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_26()'><b>SSQPad_26</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to start new track.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_27()'><b>SSQPad_27</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to stop recording track.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_28()'><b>SSQPad_28</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to "Refresh".</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_29()'><b>SSQPad_29</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to view "Help" section.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_30()'><b>SSQPad_30</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to "Support" help section.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_31()'><b>SSQPad_31</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to open Email link.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_32()'><b>SSQPad_32</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to open Telegram link.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_33()'><b>SSQPad_33</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to open IGiS link.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_34()'><b>SSQPad_34</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to open Website link.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_35()'><b>SSQPad_35</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to view "About" help section.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_36()'><b>SSQPad_36</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to view Credits dialog open by tapping on "Credits" button.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_37()'><b>SSQPad_37</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that  user is able to view Test version location.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_38()'><b>SSQPad_38</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to get SGL IGiS web site's customer support section open by tapping on "Contact us" link.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_39()'><b>SSQPad_39</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to view SGL IGiS web site by tapping on "IGiSQPad" link from bottom of "Help" section.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_40()'><b>SSQPad_40</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to close "Help" section.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_41()'><b>SSQPad_41</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to view settings section open from top panel of home page.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_42()'><b>SSQPad_42</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to get back on home page from settings section.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_43()'><b>SSQPad_43</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify the view of "General - Setting" page.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_44()'><b>SSQPad_44</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to view user ID.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_45()'><b>SSQPad_45</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to Disable Auto Sync option for upload survey data.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_46()'><b>SSQPad_46</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to on Auto Sync option for upload survey data.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_47()'><b>SSQPad_47</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to reset interface to defaults.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_48()'><b>SSQPad_48</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that all layers are not deleted by tapping on "Cancel" button from Confirm dialog box.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_49()'><b>SSQPad_49</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to hide true north on compass.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_50()'><b>SSQPad_50</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to show magnetic on compass.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
+<tr>
+<td title='SurveySolution.SurveySolution_Testcase.SSQPad_51()'><b>SSQPad_51</b><br>Test class: SurveySolution.SurveySolution_Testcase<br>Test method: To verify that user is able to turn off "Vibrate on bezel touch" functionality from compass.</td>
+<td></td>
+<td>0</td>
+<td>SurveySolution.SurveySolution_Testcase@6c0d7c83</td></tr>
 </table><p>
 </body>
 </html>

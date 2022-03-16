@@ -5,7 +5,7 @@
     <classes>
       <class name="SurveySolution.SurveySolution_Testcase">
         <methods>
-          <include name="SSQPad_14"/>
+          <include name="SSQPad_240"/>
           <include name="beforeClass"/>
         </methods>
       </class> <!-- SurveySolution.SurveySolution_Testcase -->
