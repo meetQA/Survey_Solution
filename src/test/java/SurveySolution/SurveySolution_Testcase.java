@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.Assert;
 import org.testng.ITestContext;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.aventstack.extentreports.Status;
@@ -350,12 +351,21 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(61000);
+		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO,
 				"<b>Result:</b> 1) User should get toast message of \"Invalid User ID or Password\".\r\n"
 						+ "2) User should not get signed in.");
-		Assert.assertEquals("Please check your Internet connection.",
-				driver.findElement(MobileBy.className("android.widget.TextView")).getText());
+		List<MobileElement> els2 = (List<MobileElement>) driver.findElementsByXPath("//android.widget.Toast[1]");
+		for (int i = 0; i < els2.size(); i++) {
+
+			// prints the elements of the List
+			System.out.println(els2.get(i));
+		}
+		Assert.assertEquals(false, els2.isEmpty());
+		System.out.println(driver.findElement(By.xpath("//android.widget.Toast[1]")).getText());
+		Assert.assertEquals("Invalid User ID or Password",
+				driver.findElement(By.xpath("//android.widget.Toast[1]")).getText());
+
 
 	}
 
@@ -435,7 +445,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		ExtentTestManager.getTest().log(Status.INFO,
 				"<b>Result:</b> 1) User should get signed in.\r\n"
 						+ "2) User should get following buttons on \"Home\" page of application,\r\n"
@@ -471,7 +481,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		ExtentTestManager.getTest().log(Status.INFO,
 				"<b>Result:</b> User should get following functionality available at Top panel,\r\n"
 						+ "Hamburger menu\r\n" + "Application title\r\n" + "Locate button\r\n"
@@ -506,7 +516,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -544,7 +554,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -579,7 +589,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -614,7 +624,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -722,7 +732,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -761,7 +771,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -805,19 +815,16 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Refresh)).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> Map screen should
-		// get reload.");
+        ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> Map screen shouldget reload.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		Assert.assertEquals("Refresh",
@@ -843,23 +850,18 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> 1) User should get Help section open with\r\n" +
-		 * "Support sub-section\r\n" + "About sub-section\r\n" + "IGiS Qpad link");
-		 */
-		Assert.assertEquals(true,
+        ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> 1) User should get Help section open with\r\n" +
+		  "Support sub-section\r\n" + "About sub-section\r\n" + "IGiS Qpad link");
+	    Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Support_Section)).isDisplayed());
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).isDisplayed());
@@ -886,23 +888,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> 1) User should get Help section open with Support and About sub-sections.\r\n"
-		 * + "2) User should be able to view following support links,\r\n" + "Email\r\n"
-		 * + "Telegram\r\n" + "IGiS\r\n" + "Website");
-		 */
-		Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Email)).isDisplayed());
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> 1) User should get Help section open with Support and About sub-sections.\r\n"
+		  + "2) User should be able to view following support links,\r\n" + "Email\r\n"
+		  + "Telegram\r\n" + "IGiS\r\n" + "Website");
+	    Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Email)).isDisplayed());
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Telegram)).isDisplayed());
 		Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_IGiS)).isDisplayed());
@@ -928,24 +926,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"Email\"
-		// link.");
+	    ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"Email\" link.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Email)).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to open Email link at Gmail application.");
-
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be able to open Email link at Gmail application.");
 		ApplicationState aaa = driver.queryAppState("com.google.android.gm");
 		System.out.println(aaa);
 		String ss = aaa.toString();
@@ -971,23 +964,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on
-		// \"Telegram\" link.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"Telegram\" link.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Telegram)).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to open Telegram link.");
+        ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be able to open Telegram link.");
 
 	}
 
@@ -1010,23 +999,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"IGiS\"
-		// link.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"IGiS\" link.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_IGiS)).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to open IGiS link at browser.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be able to open IGiS link at browser.");
 		ApplicationState aaa = driver.queryAppState("com.android.chrome");
 		System.out.println(aaa);
 		String ss = aaa.toString();
@@ -1053,23 +1038,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"IGiS\"
-		// link.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"IGiS\" link.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Website)).click();
 		Thread.sleep(4000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to open IGiS link at browser.");
+        ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be able to open IGiS link at browser.");
 		ApplicationState aaa = driver.queryAppState("com.android.chrome");
 		System.out.println(aaa);
 		String ss = aaa.toString();
@@ -1096,23 +1077,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\"
-		// sub section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\" sub section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).click();
 		Thread.sleep(4000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to open IGiS link at browser.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be ble to open IGiS link at browser.");
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_ContactUS)).isDisplayed());
 		Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Credits)).isDisplayed());
@@ -1140,35 +1117,27 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\"
-		// sub section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\" sub section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on
-		// \"Credits\" button.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Credits\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Credits)).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get
-		// Credits dialog open.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get Credits dialog open.");
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("com.IGiS.QPadSS:id/parentPanel")).isDisplayed());
-
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Ok\"
-		// button from Credit dialog.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Ok\" button from Credit dialog.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Yes)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get
-		// Credits dialog closed.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get Credits dialog closed.");
 		Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Credits)).isDisplayed());
 
 	}
@@ -1192,26 +1161,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\"
-		// sub section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\" sub section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Test
-		// Version - Location\" button.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Test Version - Location\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_Test_Version)).click();
 		Thread.sleep(4000);
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get
-		// test version location open at chrome browser.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get test version location open at chrome browser.");
 		ApplicationState aaa = driver.queryAppState("com.android.chrome");
 		System.out.println(aaa);
 		String ss = aaa.toString();
@@ -1238,26 +1203,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\"
-		// sub section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\" sub section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Contact
-		// us\" button.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Contact us\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_ContactUS)).click();
 		Thread.sleep(4000);
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get
-		// test version location open at chrome browser.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get test version location open at chrome browser.");
 		ApplicationState aaa = driver.queryAppState("com.android.chrome");
 		System.out.println(aaa);
 		String ss = aaa.toString();
@@ -1284,26 +1245,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\"
-		// sub section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\" sub section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on
-		// \"IGiSQPad\" button.");
+	    ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"IGiSQPad\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.lnk_IGisQpad)).click();
 		Thread.sleep(4000);
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get
-		// test version location open at chrome browser.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get test version location open at chrome browser.");
 		ApplicationState aaa = driver.queryAppState("com.android.chrome");
 		System.out.println(aaa);
 		String ss = aaa.toString();
@@ -1330,26 +1287,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Refresh.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Refresh.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Help)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\"
-		// sub section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on \"About\" sub section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_About_Section)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on Back (<-)
-		// symbol from Help page.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on Back (<- symbol from Help page.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(4000);
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to get back on \"Home\" page of SSQPad application.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be able to get back on \"Home\" page of SSQPad application.");
 		Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.Top_Panel)).isDisplayed());
 	}
 
@@ -1372,21 +1325,17 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
-		Thread.sleep(2000);
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> User should get \"Setting\" section open with following setting options,\r\n"
-		 * + "General\r\n" + "Map\r\n" + "Location\r\n" + "My tracks.");
-		 */
+		Thread.sleep(2000);		
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should get \"Setting\" section open with following setting options,\r\n"
+		  + "General\r\n" + "Map\r\n" + "Location\r\n" + "My tracks.");		 
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).isDisplayed());
 		Assert.assertEquals(true, driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Map)).isDisplayed());
@@ -1415,21 +1364,18 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> User should get \"Setting\" section open with following setting options,\r\n"
-		 * + "General\r\n" + "Map\r\n" + "Location\r\n" + "My tracks.");
-		 */
+		ExtentTestManager.getTest().log(Status.
+		  INFO,"<b>Result:</b> User should get \"Setting\" section open with following setting options,\r\n"
+		  + "General\r\n" + "Map\r\n" + "Location\r\n" + "My tracks.");		 
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).isDisplayed());
 		Assert.assertEquals(true, driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Map)).isDisplayed());
@@ -1437,12 +1383,10 @@ public class SurveySolution_Testcase {
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Location)).isDisplayed());
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_My_Tracks)).isDisplayed());
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Back (<-)
-		// symbol from Help page.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Back (<-) symbol from Help page.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(4000);
-		// ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be
-		// able to get back on \"Home\" page of SSQPad application.");
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> User should be able to get back on \"Home\" page of SSQPad application.");
 		Assert.assertEquals(true, driver.findElement(MobileBy.id(SurveySolution_Testcase_R.Top_Panel)).isDisplayed());
 	}
 
@@ -1465,29 +1409,24 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
-		Thread.sleep(2000);
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> User should be able to view General Setting page with,\r\n"
-		 * + "Account\r\n" + "Data Sync\r\n" + "Interface\r\n" +
-		 * "Compass - Show true north checkbox\r\n" +
-		 * "Compass - Show magnetic checkbox\r\n" +
-		 * "Compass - Show Vibrate on bezel touch checkbox\r\n" +
-		 * "Compass - Show keep compass screen on checkbox\r\n" + "Media attachment");
-		 */
+		Thread.sleep(2000);		
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to view General Setting page with,\r\n"
+		  + "Account\r\n" + "Data Sync\r\n" + "Interface\r\n" +
+		  "Compass - Show true north checkbox\r\n" +
+		  "Compass - Show magnetic checkbox\r\n" +
+		  "Compass - Show Vibrate on bezel touch checkbox\r\n" +
+		  "Compass - Show keep compass screen on checkbox\r\n" + "Media attachment");		 
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.id(SurveySolution_Testcase_R.label_UserId)).isDisplayed());
 
@@ -1527,24 +1466,19 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be
-		// able to view user id at \"Account\".");
-
+		 ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to view user id at \"Account\".");
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.id(SurveySolution_Testcase_R.label_UserId)).isDisplayed());
 	}
@@ -1568,36 +1502,30 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Deselect \"Auto
-		// Sync\" checkbox.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Deselect \"Auto Sync\" checkbox.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_AutoSync)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Back\"
-		// icon from general setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Back\" icon from general setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Back\"
-		// icon from setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Back\" icon from setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on
-		// \"Hamburger menu\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on \"Hamburger menu\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Hamburger_Menu)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"More
-		// option\" -> Edit.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"More option\" -> Edit.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_More)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Yes)).click();
@@ -1606,18 +1534,15 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Edit_P)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-12:</b> Tap on \"Add
-		// geometry\" (+) icon from bottom panel.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-12:</b> Tap on \"Add geometry\" (+) icon from bottom panel.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Add_new_geometry)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-13:</b> Tap on \"Save\"
-		// icon from top panel of \"Action\" mode.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-13:</b> Tap on \"Save\" icon from top panel of \"Action\" mode.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Save)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_allow_Location)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-14:</b> Tap on Camera
-		// icon from \"Photo\" field.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-14:</b> Tap on Camera icon from \"Photo\" field.");
 		TouchAction swipe = new TouchAction(driver).press(PointOption.point(13, 1553))
 				.moveTo(PointOption.point(13, 225)).release().perform();
 		Thread.sleep(2000);
@@ -1641,16 +1566,13 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Camera)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-15:</b> Tap on \"Add
-		// photo\" -> Pick photo from Gallery.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-15:</b> Tap on \"Add photo\" -> Pick photo from Gallery.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Pick_Photo)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-16:</b> Select photo
-		// from Gallery.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-16:</b> Select photo from Gallery.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Capture)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-17:</b> Tap on
-		// \"Apply\" icon from \"Set attributes\" form.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-17:</b> Tap on \"Apply\" icon from \"Set attributes\" form.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Apply)).click();
 		Thread.sleep(10000);
 
@@ -1675,38 +1597,32 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> select \"Auto
-		// Sync\" checkbox.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> select \"Auto Sync\" checkbox.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_AutoSync)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_AutoSync)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Back\"
-		// icon from general setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Back\" icon from general setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Back\"
-		// icon from setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Back\" icon from setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on
-		// \"Hamburger menu\".");
+	    ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on \"Hamburger menu\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Hamburger_Menu)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"More
-		// option\" -> Edit.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"More option\" -> Edit.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_More)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Yes)).click();
@@ -1715,18 +1631,15 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Edit_P)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-12:</b> Tap on \"Add
-		// geometry\" (+) icon from bottom panel.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-12:</b> Tap on \"Add geometry\" (+) icon from bottom panel.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Add_new_geometry)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-13:</b> Tap on \"Save\"
-		// icon from top panel of \"Action\" mode.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-13:</b> Tap on \"Save\" icon from top panel of \"Action\" mode.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Save)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_allow_Location)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-14:</b> Tap on Camera
-		// icon from \"Photo\" field.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-14:</b> Tap on Camera icon from \"Photo\" field.");
 		TouchAction swipe = new TouchAction(driver).press(PointOption.point(13, 1553))
 				.moveTo(PointOption.point(13, 225)).release().perform();
 		Thread.sleep(2000);
@@ -1750,16 +1663,13 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Camera)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-15:</b> Tap on \"Add
-		// photo\" -> Pick photo from Gallery.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-15:</b> Tap on \"Add photo\" -> Pick photo from Gallery.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Pick_Photo)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-16:</b> Select photo
-		// from Gallery.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-16:</b> Select photo from Gallery.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Capture)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-17:</b> Tap on
-		// \"Apply\" icon from \"Set attributes\" form.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-17:</b> Tap on \"Apply\" icon from \"Set attributes\" form.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Apply)).click();
 		Thread.sleep(10000);
 	}
@@ -1783,39 +1693,31 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Reset
-		// to defaults\" from Interface setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Reset to defaults\" from Interface setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Reset_Defaults)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Ok\"
-		// option from validation message.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Ok\" option from validation message.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Yes)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10</b> Tap on \"Back\"
-		// icon from general setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10</b> Tap on \"Back\" icon from general setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"Back\"
-		// icon from setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"Back\" icon from setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(4000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should not
-		// be able to view assigned layers.");
-
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should not be able to view assigned layers.");
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("com.IGiS.QPadSS:id/parentPanel")).isDisplayed());
 	}
 
@@ -1838,32 +1740,25 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Reset
-		// to defaults\" from Interface setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Reset to defaults\" from Interface setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Reset_Defaults)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on
-		// \"Cancel\" option from validation message.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap on \"Cancel\" option from validation message.");
 		driver.findElement(MobileBy.id("android:id/button2")).click();
 		Thread.sleep(2000);
-
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> \"Confirm?\"
-		// dialog should get closed.");
-
+        ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> \"Confirm?\" dialog should get closed.");
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Reset_Defaults)).isDisplayed());
 	}
@@ -1887,26 +1782,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to deselect
-		// checkbox of \"Show true north\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to deselect checkbox of \"Show true north\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Show_true_north)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be
-		// able to deselect checkbox of \"Show true north\".");
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to deselect checkbox of \"Show true north\".");
 		Assert.assertEquals("false", driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Show_true_north))
 				.getAttribute("checked"));
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
@@ -1936,26 +1827,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to select
-		// checkbox of \"Show magnetic\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to select checkbox of \"Show magnetic\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Show_magnetic)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be
-		// able to select checkbox of \"Show magnetic\".");
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to select checkbox of \"Show magnetic\".");
 		Assert.assertEquals("true", driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Show_magnetic))
 				.getAttribute("checked"));
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
@@ -1985,26 +1872,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to deselect
-		// checkbox of \"Vibrate on bezel touch\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to deselect checkbox of \"Vibrate on bezel touch\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Vibrate_on_bezel_touch)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be
-		// able to deselect checkbox of \"Vibrate on bezel touch\".");
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to deselect checkbox of \"Vibrate on bezel touch\".");
 		Assert.assertEquals("false",
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Vibrate_on_bezel_touch))
 						.getAttribute("checked"));
@@ -2035,26 +1918,22 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to deselect
-		// checkbox of \"Keep compass screen on\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap to deselect checkbox of \"Keep compass screen on\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Keep_compass_Screen)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be
-		// able to deselect checkbox of \"Keep compass screen on\".");
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to deselect checkbox of \"Keep compass screen on\".");
 		Assert.assertEquals("false",
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.chk_Keep_compass_Screen))
 						.getAttribute("checked"));
@@ -2085,35 +1964,29 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Media
-		// file max size (in MB)\" field.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Media file max size (in MB)\" field.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.label_Media_Attachment)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Enter value
-		// between 25 to 100 at text bar.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Enter value between 25 to 100 at text bar.");
 		driver.findElement(MobileBy.id("android:id/edit")).clear();
 		driver.findElement(MobileBy.id("android:id/edit")).sendKeys("50");
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on \"Ok\"
-		// button from \"Media file max size (in MB)\" dialog.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on \"Ok\" button from \"Media file max size (in MB)\" dialog.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Yes)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be
-		// able to enter value between 25 to 100 at text bar.");
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to enter value between 25 to 100 at text bar.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.label_Media_Attachment)).click();
 		Thread.sleep(2000);
 		Assert.assertEquals("50", driver.findElement(MobileBy.id("android:id/edit")).getAttribute("text"));
@@ -2138,34 +2011,28 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> General.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> General.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_General)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Media
-		// file max size (in MB)\" field.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Media file max size (in MB)\" field.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.label_Media_Attachment)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Enter value
-		// between 25 to 100 at text bar.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Enter value between 25 to 100 at text bar.");
 		driver.findElement(MobileBy.id("android:id/edit")).sendKeys("50");
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on
-		// \"Cancel\" button from \"Media file max size (in MB)\" dialog.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10:</b> Tap on \"Cancel\" button from \"Media file max size (in MB)\" dialog.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Cancel)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> Media file max
-		// size should not changed.");
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> Media file max size should not changed.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.label_Media_Attachment)).click();
 		Thread.sleep(2000);
 		Assert.assertEquals("25", driver.findElement(MobileBy.id("android:id/edit")).getAttribute("text"));
@@ -2190,29 +2057,24 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> Map.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> Map.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Map)).click();
-		Thread.sleep(2000);
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> User should be able to view Map Setting page with following settings,\r\n"
-		 * + "Show status info panel\r\n" + "Show current location\r\n" +
-		 * "Show mini compass\r\n" + "Keep map screen on\r\n" + "Show zoom controls\r\n"
-		 * + "Measurement system\r\n" + "Default zoom level\r\n" +
-		 * "Show scale ruler\r\n" + "Show zoom level\r\n" + "Coordination format\r\n" +
-		 * "Decimal places\r\n" + "Map background\r\n" + "Map path");
-		 */
+		Thread.sleep(2000);		
+		ExtentTestManager.getTest().log(Status. INFO,"<b>Result:</b> User should be able to view Map Setting page with following settings,\r\n"
+		  + "Show status info panel\r\n" + "Show current location\r\n" +
+		  "Show mini compass\r\n" + "Keep map screen on\r\n" + "Show zoom controls\r\n"
+		  + "Measurement system\r\n" + "Default zoom level\r\n" +
+		  "Show scale ruler\r\n" + "Show zoom level\r\n" + "Coordination format\r\n" +
+		  "Decimal places\r\n" + "Map background\r\n" + "Map path");		 
 		Assert.assertEquals(true,
 				driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Show_status_info_Panel)).isDisplayed());
 		Assert.assertEquals(true,
@@ -2262,50 +2124,39 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel
-		// \"More option\" -> Setting.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-6:</b> Tap on Top panel \"More option\" -> Setting.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_More_Option)).click();
 		Thread.sleep(2000);
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Settings)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel
-		// \"More option\" -> Setting -> Map.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-7:</b> Tap on Top panel \"More option\" -> Setting -> Map.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Map)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Show
-		// status info panel\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-8:</b> Tap on \"Show status info panel\".");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Show_status_info_Panel)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap to select
-		// \"Always show\".");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-9:</b> Tap to select \"Always show\".");
 		driver.findElement(MobileBy.xpath(
 				"/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.F"
 						+ "rameLayout/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/android.widget.FrameLayout/android.widget.ListVi"
 						+ "ew/android.widget.CheckedTextView[3]"))
 				.click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10</b> Tap on \"Back\"
-		// icon from general setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-10</b> Tap on \"Back\" icon from general setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
 		Thread.sleep(2000);
-		// ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"Back\"
-		// icon from setting section.");
+		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-11:</b> Tap on \"Back\" icon from setting section.");
 		driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Back)).click();
-		Thread.sleep(4000);
-
-		/*
-		 * ExtentTestManager.getTest().log(Status.
-		 * INFO,"<b>Result:</b> 1) User should get \"Home\" page SSQPad application.\r\n"
-		 * +
-		 * "2) User should be able to view Status info panel at bottom panel with following information,\r\n"
-		 * + "Latitude and Longitude for current location\r\n" + "Location accuracy\r\n"
-		 * + "Wi-Fi connectivity band\r\n" + "Speedometer\r\n" + "Elevation meter");
-		 */
-
+		Thread.sleep(4000);		
+		ExtentTestManager.getTest().log(Status.INFO,"<b>Result:</b> 1) User should get \"Home\" page SSQPad application.\r\n"
+		  +
+		  "2) User should be able to view Status info panel at bottom panel with following information,\r\n"
+		  + "Latitude and Longitude for current location\r\n" + "Location accuracy\r\n"
+		  + "Wi-Fi connectivity band\r\n" + "Speedometer\r\n" + "Elevation meter");		 
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("com.IGiS.QPadSS:id/tv_latitude")).isDisplayed());
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("com.IGiS.QPadSS:id/tv_longitude")).isDisplayed());
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("com.IGiS.QPadSS:id/tv_source")).isDisplayed());
@@ -2334,7 +2185,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2393,7 +2244,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2458,7 +2309,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2503,7 +2354,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2560,7 +2411,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2617,7 +2468,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2664,7 +2515,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2711,7 +2562,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2758,7 +2609,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2833,7 +2684,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2880,7 +2731,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2933,7 +2784,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -2979,7 +2830,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3027,7 +2878,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3073,7 +2924,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3136,7 +2987,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3202,7 +3053,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3261,7 +3112,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3308,7 +3159,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3357,7 +3208,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3406,7 +3257,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3455,7 +3306,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3504,7 +3355,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3553,7 +3404,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3602,7 +3453,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3649,7 +3500,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3698,7 +3549,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3747,7 +3598,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3796,7 +3647,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3845,7 +3696,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3894,7 +3745,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3955,7 +3806,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -3988,7 +3839,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4041,7 +3892,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4094,7 +3945,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4132,7 +3983,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4181,7 +4032,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4227,7 +4078,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4272,7 +4123,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4319,7 +4170,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4366,7 +4217,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4415,7 +4266,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4460,7 +4311,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4508,7 +4359,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4556,7 +4407,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4604,7 +4455,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4651,7 +4502,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4698,7 +4549,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4749,7 +4600,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4798,7 +4649,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4845,7 +4696,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4882,7 +4733,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4931,7 +4782,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -4982,7 +4833,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5030,7 +4881,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5093,7 +4944,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5163,7 +5014,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5229,7 +5080,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5284,7 +5135,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5347,7 +5198,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5410,7 +5261,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5468,7 +5319,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5527,7 +5378,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5560,7 +5411,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5596,7 +5447,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5647,7 +5498,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5686,7 +5537,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5737,7 +5588,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5794,7 +5645,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5853,7 +5704,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5912,7 +5763,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -5962,7 +5813,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6008,7 +5859,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6056,7 +5907,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6105,7 +5956,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6157,7 +6008,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6233,7 +6084,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6315,7 +6166,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6367,7 +6218,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6421,7 +6272,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6476,7 +6327,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6533,7 +6384,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6588,7 +6439,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6632,7 +6483,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6676,7 +6527,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6726,7 +6577,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6776,7 +6627,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6833,7 +6684,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6890,7 +6741,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -6947,7 +6798,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7008,7 +6859,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7061,7 +6912,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7141,7 +6992,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7227,7 +7078,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7311,7 +7162,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7400,7 +7251,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7488,7 +7339,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7570,7 +7421,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7658,7 +7509,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7757,7 +7608,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7824,7 +7675,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -7921,7 +7772,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8009,7 +7860,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8102,7 +7953,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8199,7 +8050,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8265,7 +8116,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8334,7 +8185,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8399,7 +8250,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8464,7 +8315,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8531,7 +8382,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8601,7 +8452,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8677,7 +8528,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8750,7 +8601,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8821,7 +8672,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8868,7 +8719,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8915,7 +8766,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -8962,7 +8813,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9009,7 +8860,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9060,7 +8911,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9111,7 +8962,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9173,7 +9024,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9227,7 +9078,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9284,7 +9135,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9346,7 +9197,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9410,7 +9261,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9472,7 +9323,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9525,7 +9376,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9574,7 +9425,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9629,7 +9480,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9687,7 +9538,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9747,7 +9598,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9797,7 +9648,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9843,7 +9694,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9883,7 +9734,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9927,7 +9778,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -9998,7 +9849,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10041,7 +9892,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10094,7 +9945,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10150,7 +10001,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10191,7 +10042,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10225,7 +10076,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10278,7 +10129,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10334,7 +10185,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10385,7 +10236,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10439,7 +10290,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10495,7 +10346,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10556,7 +10407,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10618,7 +10469,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10678,7 +10529,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10741,7 +10592,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10797,7 +10648,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10860,7 +10711,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10929,7 +10780,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -10995,7 +10846,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11067,7 +10918,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11137,7 +10988,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11203,7 +11054,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11273,7 +11124,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11351,7 +11202,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11418,7 +11269,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11495,7 +11346,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11565,7 +11416,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11639,7 +11490,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11721,7 +11572,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11791,7 +11642,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11865,7 +11716,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -11936,7 +11787,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12007,7 +11858,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12080,7 +11931,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12155,7 +12006,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12233,7 +12084,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12311,7 +12162,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12379,7 +12230,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12451,7 +12302,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12493,7 +12344,7 @@ public class SurveySolution_Testcase {
 		Thread.sleep(2000);
 		ExtentTestManager.getTest().log(Status.INFO, "<b>Step-5:</b> Tap on \"Sign in\" button.");
 		driver.findElement(MobileBy.id(SurveySolution_Testcase_R.btn_Sign_In)).click();
-		Thread.sleep(8000);
+		Thread.sleep(10000);
 		Assert.assertEquals(true, driver.findElement(MobileBy.id("android:id/content")).isDisplayed());
 		driver.findElement(MobileBy.id("android:id/button3")).click();
 		Thread.sleep(2000);
@@ -12515,4 +12366,11 @@ public class SurveySolution_Testcase {
 		Assert.assertEquals(true,driver.findElement(MobileBy.xpath(SurveySolution_Testcase_R.btn_Edit_Tool)).isDisplayed());
 	}
 
+	
+	@AfterMethod()
+	
+	public void close_App() {
+		String appId = "com.IGiS.QPadSS";
+		driver.removeApp(appId);
+	}
 }
